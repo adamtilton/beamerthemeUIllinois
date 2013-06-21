@@ -1,0 +1,38 @@
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 3.
+
+\mode<presentation>
+
+% color definitions
+\definecolor{BoldBlue}{HTML}{003C7D}
+\definecolor{BoldOrange}{HTML}{F47F24}
+\definecolor{ProBlue}{HTML}{6E8BBF}
+\definecolor{ProOrange}{HTML}{EF8A1C}
+
+% footer styling
+\setbeamercolor{section in footer}{fg=white,bg=ProBlue}
+\setbeamercolor{subsection in footer}{fg=white,bg=ProBlue}
+\setbeamercolor{pagenumber in footer}{fg=white,bg=ProBlue}
+\defbeamertemplate*{footline}{bunsentheme}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=1ex,center]{section in footer}%
+      \strut\insertshorttitle\strut
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in footer}%
+      \strut\insertsectionhead\strut
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=1ex,center]{pagenumber in footer}%
+      \strut\insertshortauthor\strut
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,center]{pagenumber in footer}%
+      \insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}}%
+\strut\insertshortauthor\strut \hfill 
+  \vskip0pt%
+}
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode
+<all>

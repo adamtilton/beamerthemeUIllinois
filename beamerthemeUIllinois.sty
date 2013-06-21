@@ -1,0 +1,75 @@
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 3.
+
+\mode<presentation>
+
+\newif\ifbeamer@secheader
+\beamer@secheaderfalse
+
+\DeclareOptionBeamer{secheader}{\beamer@secheadertrue}
+\ProcessOptionsBeamer
+
+\useoutertheme{UIllinois}
+
+% color definitions
+\definecolor{BoldBlue}{HTML}{003C7D}
+\definecolor{BoldOrange}{HTML}{F47F24}
+\definecolor{ProBlue}{HTML}{6E8BBF}
+\definecolor{ProOrange}{HTML}{EF8A1C}
+
+% set the title color
+\setbeamercolor{title}{fg=BoldBlue}
+\setbeamercolor{subtitle}{fg=ProBlue}
+\setbeamercolor{author}{fg=BoldBlue}
+\setbeamercolor{institute}{fg=ProBlue}
+\setbeamercolor{date}{fg=ProBlue}
+
+% set colors for block elements
+\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamercolor{block title}{fg=white, bg=ProOrange}
+\setbeamercolor{block body}{fg=black, bg=white}
+
+% Set color for footnotes
+\setbeamercolor{footnote}{fg=BoldBlue}
+
+% set color for alert
+\setbeamercolor{alerted text}{fg=ProBlue}
+
+% Set colors for item elements
+\setbeamertemplate{itemize items}[square] % adjusts the bullet color
+\setbeamertemplate{enumerate items}[square] % adjusts the bullet color
+\setbeamercolor{itemize item}{bg=ProBlue,fg=ProBlue} % adjusts the bullet color
+\setbeamercolor{itemize subitem}{bg=ProBlue,fg=ProBlue} % adjusts the bullet color
+\setbeamercolor{itemize subsubitem}{bg=ProBlue,fg=ProBlue} % adjusts the bullet color
+\setbeamercolor{item projected}{bg=ProBlue,fg=white} % adjusts the bullet color
+
+% frame title styling
+% \setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{frametitle}{fg=white}
+\usepackage{setspace}
+\setbeamertemplate{frametitle}{
+    % Minipage keeps text from overlaying on logo.
+    \begin{minipage}[b]{0.8\paperwidth}
+            \vspace{.7mm} % Adjust accordingly
+            {\large \bf \strut\insertframetitle\strut}\\
+            \setstretch{0} % No line spacing between lines of the subtitle
+            {\normalsize \strut\insertframesubtitle\strut}
+    \end{minipage}
+}
+
+% Table of contens styling
+\setbeamertemplate{toc}{\color{ProOrange}}
+\setbeamertemplate{sections/subsections in toc}[square]
+\setbeamercolor{section number projected}{bg=ProBlue,fg=white}
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{subsection in toc}{fg=black}
+\setbeamercolor{subsubsection in toc}{fg=black}
+
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+% \setbeamersize{frametitle=\huge}
+
+\ifbeamer@secheader\else\setbeamertemplate{headline}[default]\fi
+
+\mode
+<all>
